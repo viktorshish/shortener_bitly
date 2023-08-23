@@ -19,12 +19,16 @@ pip install -r requirements.txt
 ## Использование
 - Получение короткой ссылки:
 ```
-python main.py ВАША ССЫЛКА
-``` 
+python main.py ВАША ССКА
+```
+![create link bitly](https://github.com/viktorshish/shortener_bitly/assets/108957333/3308f0ca-ea0a-466e-b9b7-2199e0425ffa)
+
 - Получение информации о количестве преходов по Bitly ссылке:
 ```
 python main.py BITLY ССЫЛКА
 ```
+![info bitly link](https://github.com/viktorshish/shortener_bitly/assets/108957333/9449d061-673d-4b06-b047-e0cb42887471)
+
 - Cправка:
 ```
 pytthon main.py -h
