@@ -43,8 +43,7 @@ def main():
         )
     parser.add_argument('link', help='Ваша ссылка для сокращения или bitly ссылка')
     args = parser.parse_args()
-    link_args = args.link
-    parsed_link = urlparse(link_args)
+    parsed_link = urlparse(args.link)
     bitly_link =  f'{parsed_link.netloc}{parsed_link.path}'
      
     load_dotenv()
@@ -55,7 +54,7 @@ def main():
             clicks = count_clicks(token, bitly_link)
             print('Количество переходов по ссылке битли: ', clicks)
         else:
-            bitlink = shorten_link(token, link_args)
+            bitlink = shorten_link(token, args.link)
             print(bitlink)
     except requests.exceptions.HTTPError:
         print('Введена некоректная ссылка или невалидный токен ')
